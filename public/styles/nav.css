@@ -1,0 +1,38 @@
+nav {
+  display: flex;
+  height: 120px;
+  width: 100vw;
+  background-color: #344966;
+  color: #F0F4EF;
+  font-family: 'Source Sans Pro', sans-serif;
+  padding: 0 1.5em 15px;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+}
+
+/* formatting of TWEETER title/banner */
+nav>span {
+  display: flex;
+  font-family: 'Bungee', cursive;
+  align-self: flex-end;
+  font-size: 3rem;
+}
+
+/* formatting of Write a tweet and the awesome font arrows below it*/
+.rightUI{
+  display: flex;
+  align-items: flex-end;
+}
+
+.rightUiText {
+  display: flex;
+  font-family:  'Source Sans Pro', sans-serif;
+  flex-direction: column;
+}
+
+.down-arrow {
+  display: flex;
+  align-self: center;
+  color: red;
+}

@@ -1,0 +1,36 @@
+/* 
+ * new-tweet global
+*/
+.new-tweet {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.new-tweet form {
+  display: flex;
+  flex-direction: column;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+/* 
+ * Tweet text component
+*/
+textarea {
+  border: 0;
+  border-bottom: 5px #13363B solid;
+  outline: 0;
+  background-color: #F0F4EF;
+  height: 1.5em;
+}
+
+button {
+  border: 0;
+  background-color: #13363B;
+  color: #F0F4EF;
+}
+
+.button-text-div {
+  display: flex;
+  justify-content: space-between;
+  font-family: 'Bungee', cursive;
+}
