@@ -7,7 +7,8 @@ $(document).ready(function() {
     const $counter = $tweetForm.find(".counter");
     // edits the html to update character limit
     $counter.html(140 - charLength);
-    if (charLength === 140) {
+    console.log(charLength)
+    if (charLength >= 140) {
       $counter.css("color", "red");
     } else {
       $counter.css("color", "#545149");
