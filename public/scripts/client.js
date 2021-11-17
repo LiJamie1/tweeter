@@ -5,6 +5,7 @@
  */
 
 // fake data
+
 const data = [
   {
     "user": {
@@ -32,7 +33,11 @@ const data = [
 
 
 const renderTweets = function(tweets) {
-  //
+  const $tweetContainer = $('.posted-tweets') 
+  for (const tweet of tweets) {
+    const result = createTweetElement(tweet)
+    $tweetContainer.prepend(result)
+  }
 }
 
 const createTweetElement = function(tweet) {
