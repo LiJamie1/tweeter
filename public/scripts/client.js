@@ -31,46 +31,47 @@ const data = [
   }
 ]
 
-
-const renderTweets = function(tweets) {
-  const $tweetContainer = $('.posted-tweets') 
-  for (const tweet of tweets) {
-    const result = createTweetElement(tweet)
-    $tweetContainer.prepend(result)
+$(document).ready(function() {
+  const renderTweets = function(tweets) {
+    const $tweetContainer = $('.posted-tweets') 
+    for (const tweet of tweets) {
+      const $result = createTweetElement(tweet)
+      $tweetContainer.prepend($result)
+    }
   }
-}
+  
+  const createTweetElement = function(tweet) {
+  
+    const timeCreated = timeago.format(tweet.created_at)
+  
+    const $tweet = $(`
+    <article>
+      <header class="article-header">
+        <div class="tweet-profile">
+          <img class="avatar" src="${tweet.user.avatars}"> 
+          <h4 class="header-name">${tweet.user.name}</h4>
+        </div>
+        <div>
+          <h4 class="username">${tweet.user.handle}</h4>
+        </div>
+      </header>
+      <p class="posted-tweet-body">${tweet.content.text}</p>
+      <footer class="article-footer">
+        <span class="footer-content time-stamp">${timeCreated}</span>
+        <span class="footer-content fas-footer">
+          <i class="fas fa-flag"></i>
+          <i class="fas fa-retweet"></i>
+          <i class="fas fa-heart"></i>
+        </span>
+      </footer>
+    </article>
+    `)
+  
+    return $tweet;
+  }
 
-const createTweetElement = function(tweet) {
-
-  const timeCreated = timeago().format(tweet.created_at)
-
-  const $tweet = $(`
-  <article>
-    <header class="article-header">
-      <div class="tweet-profile">
-        <img class="avatar" src="${tweet.avatars}"> 
-        <h4 class="header-name">${tweet.name}</h4>
-      </div>
-      <div>
-        <h4 class="username">${tweet.handle}</h4>
-      </div>
-    </header>
-    <p class="posted-tweet-body">${tweet.content.text}</p>
-    <footer class="article-footer">
-      <span class="footer-content time-stamp">${timeCreated} ago</span>
-      <span class="footer-content fas-footer">
-        <i class="fas fa-flag"></i>
-        <i class="fas fa-retweet"></i>
-        <i class="fas fa-heart"></i>
-      </span>
-    </footer>
-  <article>
-  `)
-
-  return $tweet;
-}
-
-renderTweets(data);
+  renderTweets(data);
+});
 
 
 

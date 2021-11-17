@@ -27,11 +27,13 @@ article:hover {
 
 .article-header > .tweet-profile {
   display: flex;
+  align-items: center;
 }
 
 .avatar {
-  width: 5rem;
-  margin-top: 5px;
+  width: 1.6em;
+  height: 1.6em;
+  margin: 32px 10px;
 }
 
 /* paragraph tag */
