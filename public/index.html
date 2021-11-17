@@ -32,8 +32,8 @@
     <nav>
       <span>tweeter</span>
 
-      <div class="rightUI">
-        <div class="rightUiText">
+      <div class="right-ui">
+        <div class="right-ui-text">
           <span> <b>Write</b> a new tweet</span>
           <i class="down-arrow fas fa-angle-double-down"></i>
         </div>
@@ -56,7 +56,6 @@
       <section class="new-tweet">
         <h2>Compose Tweet</h2>
         <form method="POST" action="/tweets">
-          <!-- <label for="tweet-text">What are you humming about?</label> -->
           <textarea placeholder="What are you humming about?" name="text" id="tweet-text"></textarea>
           <div class="button-text-div">
             <button type="submit">Tweet</button>
@@ -65,6 +64,7 @@
         </form>
       </section>
       <br>
+      <!-- section for tweet body each article is one tweet, each tweet is in 3 sections: header, paragraph and footer-->
       <section class="posted-tweets">
         <article>
           <header class="article-header">
@@ -73,12 +73,12 @@
               <h4 class="header-name">Name</h4>
             </div>
             <div>
-              <h4>@Username</h4>
+              <h4 class="username">@Username</h4>
             </div>
           </header>
           <p class="posted-tweet-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, consequuntur! Eligendi placeat hic libero voluptatibus blanditiis cupiditate amet molestiae unde ullam autem. Maiores culpa, quas cupiditate dolorem iste eius laudantium?</p>
           <footer class="article-footer">
-            <span class="footer-content">Time goes here</span>
+            <span class="footer-content time-stamp">Time goes here</span>
             <span class="footer-content fas-footer">
               <i class="fas fa-flag"></i>
               <i class="fas fa-retweet"></i>

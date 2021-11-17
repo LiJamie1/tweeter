@@ -20,12 +20,12 @@ nav>span {
 }
 
 /* formatting of Write a tweet and the awesome font arrows below it*/
-.rightUI{
+.right-ui{
   display: flex;
   align-items: flex-end;
 }
 
-.rightUiText {
+.right-ui-text {
   display: flex;
   font-family:  'Source Sans Pro', sans-serif;
   flex-direction: column;

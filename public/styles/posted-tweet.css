@@ -1,9 +1,11 @@
+/* section tag containing tweets */
 .posted-tweets {
   width: 90%;
   background-color: #f4f1ec;
   margin: 0 auto;
 }
 
+/* article tag and hover effect */
 article {
   display: flex;
   flex-direction: column;
@@ -12,6 +14,11 @@ article {
   margin: 30px;
 }
 
+article:hover {
+  box-shadow: 5px 5px #13363B;
+}
+
+/* header tag including the avatar, name, username */
 .article-header {
   display: flex;
   justify-content: space-between;
@@ -27,18 +34,28 @@ article {
   margin-top: 5px;
 }
 
+/* paragraph tag */
 .posted-tweet-body {
   padding: 0px 0px 15px;
   margin: 0px 15px 5px;
   border-bottom: 3px solid; 
-
 }
 
+/* footer tag including time stamp and awesome font hover */
 .article-footer {
   display: flex;
   justify-content: space-between;
 }
 
+.time-stamp {
+  font-size: 18px;
+  font-weight: bolder;
+}
+
 .footer-content {
   padding: 5px 15px;
+}
+
+span>.fas:hover {
+  color: #E6AACE;
 }
