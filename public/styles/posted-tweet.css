@@ -1,3 +1,40 @@
-.posted-tweet {
-  color: green;
+.posted-tweets {
+  width: 90%;
+  background-color: #f4f1ec;
+  font-family: 'Source Sans Pro', sans-serif;
+  margin: 0 auto;
+}
+
+article {
+  display: flex;
+  flex-direction: column;
+  border-style: solid;
+  border-width: 3px;
+  margin: 30px;
+}
+
+.article-header {
+  display: flex;
+  justify-content: space-between;
+  margin: 0px 15px;
+}
+
+.header-info {
+  margin: 10px 0px 15px;
+}
+
+.posted-tweet-body {
+  padding: 0px 0px 15px;
+  margin: 0px 15px 5px;
+  border-bottom: 3px solid; 
+
+}
+
+.article-footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-content {
+  padding: 5px 15px;
 }
