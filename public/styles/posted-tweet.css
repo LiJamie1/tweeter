@@ -1,7 +1,6 @@
 .posted-tweets {
   width: 90%;
   background-color: #f4f1ec;
-  font-family: 'Source Sans Pro', sans-serif;
   margin: 0 auto;
 }
 
@@ -19,8 +18,13 @@ article {
   margin: 0px 15px;
 }
 
-.header-info {
-  margin: 10px 0px 15px;
+.article-header > .tweet-profile {
+  display: flex;
+}
+
+.avatar {
+  width: 5rem;
+  margin-top: 5px;
 }
 
 .posted-tweet-body {
