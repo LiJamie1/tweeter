@@ -12,8 +12,9 @@ $(document).ready(function() {
     
     if (charLength > 140) {
       $counter.css("color", "red");
-    } 
-
+    } else {
+      $counter.css("color", "#545149");
+    }
   });
 });
 
