@@ -1,0 +1,16 @@
+/* to the top button */
+.to-top-button>button {
+  border-radius: 50%;
+  padding: 20px;
+  background-color: #252375;
+  border: 0;
+  position: fixed;
+  right: 0px; bottom: 0px;
+  margin-right: 40px;
+}
+.to-top-button>button>i {
+  background-color: #252375;
+  border: 0;
+  color: #ffffff;
+  font-size: 30px;
+}
