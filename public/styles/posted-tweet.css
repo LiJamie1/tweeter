@@ -42,7 +42,10 @@ article:hover {
 .posted-tweet-body {
   padding: 0px 0px 15px;
   margin: 0px 15px 5px;
-  border-bottom: 3px solid; 
+  border-bottom: 3px solid;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  hyphens: auto;
 }
 
 /* footer tag including time stamp and awesome font hover */

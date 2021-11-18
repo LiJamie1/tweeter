@@ -6,6 +6,8 @@
 
 $(document).ready(function () {
 
+  $("#error-message").hide("slow")
+
   //submit handler & post request
   $("#form-tweet").submit(function (event) {
     event.preventDefault();
@@ -21,9 +23,8 @@ $(document).ready(function () {
       $("#error-message").css("color", "black")
       $("#error-message").show("slow")
     } else {
-      $("#error-message").hide("slow")
+      $("#error-message").slideUp("slow")
       $("#error-message").css("color", "transparent")
-      $("#error-message").css("background-color", "transparent")
       $.post("http://localhost:8080/tweets", content, function () {
         $("#tweet-text").val("");
         $(".counter").text("140");
