@@ -33,11 +33,20 @@ $(document).ready(function() {
     }
     
   })
+
+  // escape function
+  const escape = function (str) {
+    let div = document.createElement("div");
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+  };
+  
   
   //construct tweet format
   const createTweetElement = function(tweet) {
   
     const timeCreated = timeago.format(tweet.created_at);
+    const content = escape(tweet.content.text);
   
     const $tweet = $(`
     <article>
@@ -50,7 +59,7 @@ $(document).ready(function() {
           <h4 class="username">${tweet.user.handle}</h4>
         </div>
       </header>
-      <p class="posted-tweet-body">${tweet.content.text}</p>
+      <p class="posted-tweet-body">${content}</p>
       <footer class="article-footer">
         <span class="footer-content time-stamp">${timeCreated}</span>
         <span class="footer-content fas-footer">
