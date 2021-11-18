@@ -2,8 +2,8 @@ nav {
   display: flex;
   height: 120px;
   width: 100vw;
-  background-color: #344966;
-  color: #F0F4EF;
+  background-color: #9A9C3A;
+  color: #2D2E08;
   font-family: 'Source Sans Pro', sans-serif;
   padding: 0 1.5em 15px;
   justify-content: space-between;
@@ -34,5 +34,9 @@ nav>span {
 .down-arrow {
   display: flex;
   align-self: center;
-  color: red;
+  color: #2D2E08;
+}
+
+.down-arrow:hover {
+  color: #F7FA37;
 }

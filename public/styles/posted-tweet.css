@@ -1,7 +1,7 @@
 /* section tag containing tweets */
 .posted-tweets {
   width: 90%;
-  background-color: #f4f1ec;
+  background-color: #ffffff;
   margin: 0 auto;
 }
 
@@ -12,10 +12,12 @@ article {
   border-style: solid;
   border-width: 3px;
   margin: 30px;
+  border-radius: 15px 50px 30px;
+  padding: 20px; 
 }
 
 article:hover {
-  box-shadow: 5px 5px #13363B;
+  box-shadow: 5px 5px #252375;
 }
 
 /* header tag including the avatar, name, username */
@@ -59,5 +61,5 @@ article:hover {
 }
 
 span>.fas:hover {
-  color: #E6AACE;
+  color: #252375;
 }

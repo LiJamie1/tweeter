@@ -17,20 +17,31 @@
 */
 textarea {
   border: 0;
-  border-bottom: 5px #13363B solid;
+  border-bottom: 5px #252375 solid;
   outline: 0;
-  background-color: #F0F4EF;
+  background-color: #ffffff;
   height: 3em;
 }
 
 button {
   border: 0;
-  background-color: #13363B;
-  color: #F0F4EF;
+  background-color: #252375;
+  color: #ffffff;
+  border-radius: 5px;
+  padding: 5px; 
+  box-shadow: 5px 5px #999
+}
+
+button:active {
+  transform: translateY(3px);
+  box-shadow: 2px 2px #666;
+
 }
 
 .button-text-div {
   display: flex;
   justify-content: space-between;
   font-family: 'Bungee', cursive;
+  margin-top: 3px;
 }
+

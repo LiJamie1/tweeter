@@ -15,12 +15,10 @@ $(document).ready(function () {
     if (contentLength <= 0) {
       $("#error-message").html(`<h4> <i class="fas fa-exclamation-triangle"></i> Tweet is too short! <i class="fas fa-exclamation-triangle"></i> </h4>`)
       $("#error-message").css("color", "black")
-      $("#error-message").css("background-color", "red")
       $("#error-message").show("slow")
     } else if (contentLength > 140) {
       $("#error-message").html(`<h4> <i class="fas fa-exclamation-triangle"></i> Tweet is too long! <i class="fas fa-exclamation-triangle"></i> </h4>`)
       $("#error-message").css("color", "black")
-      $("#error-message").css("background-color", "red")
       $("#error-message").show("slow")
     } else {
       $("#error-message").hide("slow")
@@ -45,15 +43,12 @@ $(document).ready(function () {
   loadTweet();
 });
 
-
-
 // escape function
 const escape = function (str) {
   let div = document.createElement("div");
   div.appendChild(document.createTextNode(str));
   return div.innerHTML;
 };
-
 
 //construct tweet format
 const createTweetElement = function (tweet) {

@@ -13,8 +13,8 @@ html {
 /* Global layout stuff */
 
 body {
-  color: #545149;
-  background-color: #f4f1ec;
+  color: #000000;
+  background-color: #ffffff;
   font-size: 24px;
   
 }
@@ -26,7 +26,7 @@ body {
 /* main */
 main {
   width: 90%;
-  background-color: #f4f1ec;
+  background-color: #ffffff;
   font-family: 'Source Sans Pro', sans-serif;
   margin: 0 auto;
   /* display: flex;
@@ -37,10 +37,10 @@ main {
 #error-message {
   display: flex;
   width: 80%;
-  margin: 0 auto;
+  margin: 10px auto 0;
   color: transparent;
   border-style: solid;
-  border-width: 5px;
+  border-width: 3px;
   justify-content: center;
-  font-family: 'Bungee', cursive;
+  border-radius: 15px 50px;
 }

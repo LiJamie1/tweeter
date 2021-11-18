@@ -11,9 +11,9 @@ $(document).ready(function() {
     $counter.html(maxCharLength - charLength);
     
     if (charLength > 140) {
-      $counter.css("color", "red");
+      $counter.css("color", "#d00000");
     } else {
-      $counter.css("color", "#545149");
+      $counter.css("color", "#000000");
     }
   });
 });
