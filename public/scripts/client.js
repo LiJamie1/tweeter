@@ -87,9 +87,10 @@ const createTweetElement = function (tweet) {
   return $tweet;
 }
 
-// render tweet made from createTweetElement
+// render tweet made from createTweetElement // empties initial tweets from newton and descartes from future first tweets
 const renderTweets = function (tweets) {
   const $tweetContainer = $('.posted-tweets');
+  $tweetContainer.empty();
   for (const tweet of tweets) {
     const $result = createTweetElement(tweet);
     $tweetContainer.prepend($result);
