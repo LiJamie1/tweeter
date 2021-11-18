@@ -25,18 +25,30 @@ nav>span {
   align-items: flex-end;
 }
 
-.right-ui-text {
-  display: flex;
-  font-family:  'Source Sans Pro', sans-serif;
-  flex-direction: column;
-}
-
 .down-arrow {
   display: flex;
-  align-self: center;
+  justify-content: center;
   color: #2D2E08;
 }
 
-.down-arrow:hover {
+.downward-arrow-button {
+  background-color: transparent;
+  border: 0;
+}
+
+.downward-arrow-button:hover {
   color: #F7FA37;
 }
+
+.downward-arrow-button:active {
+  color: #252375;
+}
+
+.downward-arrow-button:hover > span > i {
+  color: #F7FA37;
+}
+
+.downward-arrow-button:active > span > i {
+  color: #252375;
+}
+

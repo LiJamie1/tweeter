@@ -5,9 +5,12 @@
  */
 
 $(document).ready(function () {
-
+  // hide error message to start with it hidden
   $("#error-message").hide("slow")
 
+  //div-button
+  
+  
   //submit handler & post request
   $("#form-tweet").submit(function (event) {
     event.preventDefault();

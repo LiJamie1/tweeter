@@ -23,7 +23,7 @@ textarea {
   height: 3em;
 }
 
-button {
+.tweet-button {
   border: 0;
   background-color: #252375;
   color: #ffffff;
@@ -32,10 +32,9 @@ button {
   box-shadow: 5px 5px #999
 }
 
-button:active {
+.tweet-button:active {
   transform: translateY(3px);
   box-shadow: 2px 2px #666;
-
 }
 
 .button-text-div {

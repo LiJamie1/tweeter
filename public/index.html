@@ -34,10 +34,9 @@
       <span>tweeter</span>
 
       <div class="right-ui">
-        <div class="right-ui-text">
-          <span> <b>Write</b> a new tweet</span>
-          <i class="down-arrow fas fa-angle-double-down"></i>
-        </div>
+        <button class="downward-arrow-button">
+            <span><b>Write</b> a new tweet<i class="down-arrow fas fa-angle-double-down"></i> </span>
+        </button>
       </div>
     </nav>
 
@@ -60,7 +59,7 @@
         <form method="POST" action="/tweets" id="form-tweet">
           <textarea placeholder="What are you humming about?" name="text" id="tweet-text"></textarea>
           <div class="button-text-div">
-            <button type="submit">Tweet</button>
+            <button class="tweet-button"type="submit">Tweet</button>
             <output name="counter" class="counter" for="tweet-text">140</output>
           </div>
         </form>
