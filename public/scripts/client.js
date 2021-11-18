@@ -33,12 +33,19 @@
 
 $(document).ready(function() {
 
-  
+  //submit handler & post request
+  $("#form-tweet").submit(function( event ) {
+    event.preventDefault();
+    const content = $("tweet-text").serialize()
+    $.post("http://localhost:8080/tweets", content, function() {
+      console.log("posted", content)
+    })
+  })
   
   //construct tweet format
   const createTweetElement = function(tweet) {
   
-    const timeCreated = timeago.format(tweet.created_at)
+    const timeCreated = timeago.format(tweet.created_at);
   
     const $tweet = $(`
     <article>
@@ -61,17 +68,17 @@ $(document).ready(function() {
         </span>
       </footer>
     </article>
-    `)
+    `);
   
     return $tweet;
   }
 
   // render tweet made from createTweetElement
   const renderTweets = function(tweets) {
-    const $tweetContainer = $('.posted-tweets') 
+    const $tweetContainer = $('.posted-tweets') ;
     for (const tweet of tweets) {
-      const $result = createTweetElement(tweet)
-      $tweetContainer.prepend($result)
+      const $result = createTweetElement(tweet);
+      $tweetContainer.prepend($result);
     }
   }
 
