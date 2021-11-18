@@ -10,9 +10,7 @@ html {
   box-sizing: inherit;
 }
 
-/*
- * Global layout stuff
- */
+/* Global layout stuff */
 
 body {
   color: #545149;
@@ -25,9 +23,7 @@ body {
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
  
-/* 
- * main 
-*/
+/* main */
 main {
   width: 90%;
   background-color: #f4f1ec;
@@ -35,4 +31,16 @@ main {
   margin: 0 auto;
   /* display: flex;
   justify-content: center; */
+}
+
+/* error message */
+#error-message {
+  display: flex;
+  width: 80%;
+  margin: 0 auto;
+  color: transparent;
+  border-style: solid;
+  border-width: 5px;
+  justify-content: center;
+  font-family: 'Bungee', cursive;
 }
