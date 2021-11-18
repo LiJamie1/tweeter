@@ -4,51 +4,64 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
-$(document).ready(function() {
-
-  //load tweet
-  const loadTweet = function() {
-    $.get("http://localhost:8080/tweets")
-      .done(function(data) {
-        renderTweets(data)
-      })
-  }
+$(document).ready(function () {
 
   //submit handler & post request
-  $("#form-tweet").submit(function( event ) {
+  $("#form-tweet").submit(function (event) {
     event.preventDefault();
     const contentLength = $("#tweet-text").val().length;
     const content = $("#form-tweet").serialize();
 
     if (contentLength <= 0) {
-      window.alert("NO!! >:( Tweet too short!")
+      $("#error-message").html(`<h4> <i class="fas fa-exclamation-triangle"></i> Tweet is too short! <i class="fas fa-exclamation-triangle"></i> </h4>`)
+      $("#error-message").css("color", "black")
+      $("#error-message").css("background-color", "red")
+      $("#error-message").show("slow")
     } else if (contentLength > 140) {
-      window.alert("NO!! >:( Tweet too long!")
+      $("#error-message").html(`<h4> <i class="fas fa-exclamation-triangle"></i> Tweet is too long! <i class="fas fa-exclamation-triangle"></i> </h4>`)
+      $("#error-message").css("color", "black")
+      $("#error-message").css("background-color", "red")
+      $("#error-message").show("slow")
     } else {
-      $.post("http://localhost:8080/tweets", content, function() {
+      $("#error-message").hide("slow")
+      $("#error-message").css("color", "transparent")
+      $("#error-message").css("background-color", "transparent")
+      $.post("http://localhost:8080/tweets", content, function () {
         $("#tweet-text").val("");
-        $(".counter").val("140");
+        $(".counter").text("140");
         loadTweet();
       })
     }
-    
   })
 
-  // escape function
-  const escape = function (str) {
-    let div = document.createElement("div");
-    div.appendChild(document.createTextNode(str));
-    return div.innerHTML;
-  };
-  
-  
-  //construct tweet format
-  const createTweetElement = function(tweet) {
-  
-    const timeCreated = timeago.format(tweet.created_at);
-    const content = escape(tweet.content.text);
-  
-    const $tweet = $(`
+  //load tweet
+  const loadTweet = function () {
+    $.get("http://localhost:8080/tweets")
+      .done(function (data) {
+        renderTweets(data)
+      })
+  }
+
+  loadTweet();
+});
+
+
+
+// escape function
+const escape = function (str) {
+  let div = document.createElement("div");
+  div.appendChild(document.createTextNode(str));
+  return div.innerHTML;
+};
+
+
+//construct tweet format
+const createTweetElement = function (tweet) {
+
+  const timeCreated = timeago.format(tweet.created_at);
+  const content = escape(tweet.content.text);
+
+  const $tweet = $(`
     <article>
       <header class="article-header">
         <div class="tweet-profile">
@@ -70,20 +83,15 @@ $(document).ready(function() {
       </footer>
     </article>
     `);
-  
-    return $tweet;
+
+  return $tweet;
+}
+
+// render tweet made from createTweetElement
+const renderTweets = function (tweets) {
+  const $tweetContainer = $('.posted-tweets');
+  for (const tweet of tweets) {
+    const $result = createTweetElement(tweet);
+    $tweetContainer.prepend($result);
   }
-
-  // render tweet made from createTweetElement
-  const renderTweets = function(tweets) {
-    const $tweetContainer = $('.posted-tweets') ;
-    for (const tweet of tweets) {
-      const $result = createTweetElement(tweet);
-      $tweetContainer.prepend($result);
-    }
-  }
-
-});
-
-
-
+}
