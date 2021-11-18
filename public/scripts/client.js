@@ -27,7 +27,7 @@ $(document).ready(function() {
     } else {
       $.post("http://localhost:8080/tweets", content, function() {
         $("#tweet-text").val("");
-        $(".counter").val("140")
+        $(".counter").val("140");
         loadTweet();
       })
     }
