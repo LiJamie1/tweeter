@@ -8,9 +8,11 @@ $(document).ready(function () {
   // hide error message to start with it hidden
   $("#error-message").hide("slow")
 
-  //div-button
-  
-  
+  //toggle tweet input box
+  $(".downward-arrow-button").click(function() {
+    $(".new-tweet").slideToggle("slow")
+  })
+
   //submit handler & post request
   $("#form-tweet").submit(function (event) {
     event.preventDefault();
