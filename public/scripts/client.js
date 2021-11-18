@@ -8,7 +8,7 @@ $(document).ready(function() {
 
   //load tweet
   const loadTweet = function() {
-    $.ajax("http://localhost:8080/tweets", {method: "GET"})
+    $.get("http://localhost:8080/tweets")
       .done(function(data) {
         renderTweets(data)
       })
