@@ -8,6 +8,20 @@ $(document).ready(function () {
   // hide error message to start with it hidden
   $("#error-message").hide("slow")
 
+  //scroll to tweet input button, will open tweet input if stowed away
+  // WIP still need to make follow/sticky feature
+  // $(window).scroll(function() {
+  //   $('.to-top-button')
+
+  // })
+
+  $('.to-top-button').click(function() {
+    $('html, body').animate({
+      scrollTop: 0
+    }, 500);
+    $(".new-tweet").slideDown(1000)
+  })
+
   //toggle tweet input box
   $(".downward-arrow-button").click(function() {
     $(".new-tweet").slideToggle("slow")
