@@ -16,13 +16,10 @@ body {
   color: #000000;
   background-color: #ffffff;
   font-size: 24px;
-  
+  display: flex;
+  flex-direction: column;
 }
 
-/*
- * Additional CSS can be defined below or in other CSS files, as per instructions
- */
- 
 /* main */
 main {
   width: 90%;
@@ -41,4 +38,15 @@ main {
   border-width: 3px;
   justify-content: center;
   border-radius: 15px 50px;
+}
+
+@media only screen and (min-width: 1024px) {
+  body {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  main {
+    width: 60vw;
+  }
 }

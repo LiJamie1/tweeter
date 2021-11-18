@@ -40,15 +40,8 @@ nav>span {
   color: #F7FA37;
 }
 
-.downward-arrow-button:active {
-  color: #252375;
-}
-
 .downward-arrow-button:hover > span > i {
   color: #F7FA37;
 }
 
-.downward-arrow-button:active > span > i {
-  color: #252375;
-}
 

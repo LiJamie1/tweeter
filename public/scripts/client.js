@@ -8,11 +8,10 @@ $(document).ready(function () {
   // hide error message label and to top button div at start
   $("#error-message").hide()
   $('.to-top-button').hide()
-
+  
   //scroll to tweet input button, will open tweet input if stowed away
-  // WIP still need to make follow/sticky feature
   $(document).scroll(function() {
-    if ($(this).scrollTop() > 700) {
+    if ($(this).scrollTop() > 600) {
       $(".to-top-button").fadeIn()
     } else {
       $('.to-top-button').fadeOut()

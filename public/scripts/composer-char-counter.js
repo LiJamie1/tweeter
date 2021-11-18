@@ -1,5 +1,4 @@
 $(document).ready(function() {
-  console.log("ready");
   // event handler to textarea form inside new-tweet
   $("#tweet-text").on("input", function() {
     const maxCharLength = 140
@@ -10,7 +9,7 @@ $(document).ready(function() {
     // edits the html to update character limit
     $counter.html(maxCharLength - charLength);
     
-    if (charLength > 140) {
+    if (charLength > maxCharLength) {
       $counter.css("color", "#d00000");
     } else {
       $counter.css("color", "#000000");
