@@ -17,11 +17,21 @@ $(document).ready(function() {
   //submit handler & post request
   $("#form-tweet").submit(function( event ) {
     event.preventDefault();
-    const content = $("#form-tweet").serialize()
-    $.post("http://localhost:8080/tweets", content, function() {
-      console.log("posted")
-      loadTweet();
-    })
+    const contentLength = $("#tweet-text").val().length;
+    const content = $("#form-tweet").serialize();
+
+    if (contentLength <= 0) {
+      window.alert("NO!! >:( Tweet too short!")
+    } else if (contentLength > 140) {
+      window.alert("NO!! >:( Tweet too long!")
+    } else {
+      $.post("http://localhost:8080/tweets", content, function() {
+        $("#tweet-text").val("");
+        $(".counter").val("140")
+        loadTweet();
+      })
+    }
+    
   })
   
   //construct tweet format
