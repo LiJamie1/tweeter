@@ -9,7 +9,7 @@ $(document).ready(function() {
   //load tweet
   const loadTweet = function() {
     $.ajax("http://localhost:8080/tweets", {method: "GET"})
-      .done((data) => {
+      .done(function(data) {
         renderTweets(data)
       })
   }
@@ -17,9 +17,10 @@ $(document).ready(function() {
   //submit handler & post request
   $("#form-tweet").submit(function( event ) {
     event.preventDefault();
-    const content = $("tweet-text").serialize()
+    const content = $("#form-tweet").serialize()
     $.post("http://localhost:8080/tweets", content, function() {
-      console.log("posted", content)
+      console.log("posted")
+      loadTweet();
     })
   })
   
