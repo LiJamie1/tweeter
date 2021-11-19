@@ -1,6 +1,4 @@
-/* 
- * new-tweet global
-*/
+ /* new-tweet section global */
 .new-tweet {
   width: 90%;
   margin: 0 auto;
@@ -9,24 +7,22 @@
 .new-tweet form {
   display: flex;
   flex-direction: column;
-  font-family: 'Source Sans Pro', sans-serif;
 }
 
-/* 
- * Tweet text component
-*/
+/* Tweet text component */
 textarea {
   border: 0;
   border-bottom: 5px #252375 solid;
   outline: 0;
-  background-color: #ffffff;
+  background-color: transparent;
   height: 3em;
 }
 
+/* tweet button */
 .tweet-button {
   border: 0;
   background-color: #252375;
-  color: #ffffff;
+  color: #e5e5e5;
   border-radius: 5px;
   padding: 5px; 
   box-shadow: 5px 5px #999

@@ -31,9 +31,11 @@ nav>span {
   color: #2D2E08;
 }
 
+/* formatting of the button that toggles the tweet input */
 .downward-arrow-button {
   background-color: transparent;
   border: 0;
+  
 }
 
 .downward-arrow-button:hover {
@@ -43,5 +45,3 @@ nav>span {
 .downward-arrow-button:hover > span > i {
   color: #F7FA37;
 }
-
-

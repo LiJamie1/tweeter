@@ -7,12 +7,14 @@
   flex-direction: column;
   align-items: center;
   background-color: #2F2F57;
+  background-image: url("https://www.transparenttextures.com/patterns/cream-pixels.png");
 }
 
 .name {
-  color: white;
+  color: #e5e5e5;
 }
 
+/* when in desktop mode the following changes are made to the #user-info */
 @media only screen and (min-width: 1024px) {
   
   #user-info {

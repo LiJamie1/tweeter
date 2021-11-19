@@ -10,6 +10,7 @@ $(document).ready(function () {
   $('.to-top-button').hide()
   
   //scroll to tweet input button, will open tweet input if stowed away
+  //shows when ~600 pixels down the screen
   $(document).scroll(function() {
     if ($(this).scrollTop() > 600) {
       $(".to-top-button").fadeIn()
@@ -31,17 +32,19 @@ $(document).ready(function () {
   })
 
   //submit handler & post request
+  //validation of content length results in the display of the appropriate error
   $("#form-tweet").submit(function (event) {
     event.preventDefault();
     const contentLength = $("#tweet-text").val().length;
     const content = $("#form-tweet").serialize();
+    const warningSign = '<i class="fas fa-exclamation-triangle"></i>'
 
     if (contentLength <= 0) {
-      $("#error-message").html(`<h4> <i class="fas fa-exclamation-triangle"></i> Tweet is too short! <i class="fas fa-exclamation-triangle"></i> </h4>`)
+      $("#error-message").html(`<h4> ${warningSign} Tweet is too short! ${warningSign} </h4>`)
       $("#error-message").css("color", "black")
       $("#error-message").show("slow")
     } else if (contentLength > 140) {
-      $("#error-message").html(`<h4> <i class="fas fa-exclamation-triangle"></i> Tweet is too long! <i class="fas fa-exclamation-triangle"></i> </h4>`)
+      $("#error-message").html(`<h4> ${warningSign} Tweet is too long! ${warningSign} </h4>`)
       $("#error-message").css("color", "black")
       $("#error-message").show("slow")
     } else {
@@ -73,7 +76,7 @@ const escape = function (str) {
   return div.innerHTML;
 };
 
-//construct tweet format
+//construct tweet format via template
 const createTweetElement = function (tweet) {
 
   const timeCreated = timeago.format(tweet.created_at);
@@ -105,7 +108,8 @@ const createTweetElement = function (tweet) {
   return $tweet;
 }
 
-// render tweet made from createTweetElement // empties initial tweets from newton and descartes from future first tweets
+// render tweet made from createTweetElement.
+// empties initial tweets from newton and descartes from future first tweets
 const renderTweets = function (tweets) {
   const $tweetContainer = $('.posted-tweets');
   $tweetContainer.empty();

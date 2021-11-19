@@ -1,7 +1,6 @@
 /* section tag containing tweets */
 .posted-tweets {
   width: 90%;
-  background-color: #ffffff;
   margin: 0 auto;
 }
 
@@ -14,6 +13,7 @@ article {
   margin: 30px;
   border-radius: 15px 50px 30px;
   padding: 20px; 
+  background-color: #fbfbf2;
 }
 
 article:hover {
@@ -63,6 +63,14 @@ article:hover {
   padding: 5px 15px;
 }
 
-span>.fas:hover {
-  color: #252375;
+span>.fa-flag:hover {
+  color: #ffd166;
+}
+
+span>.fa-retweet:hover {
+  color: #118ab2;
+}
+
+span>.fa-heart:hover {
+  color: #ef476f;
 }
