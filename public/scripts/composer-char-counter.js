@@ -1,7 +1,7 @@
 $(document).ready(function() {
   // event handler to textarea form inside new-tweet
   $("#tweet-text").on("input", function() {
-    const maxCharLength = 140
+    const maxCharLength = 140;
     const charLength = $(this).val().length;
     const $tweetForm = $(this).closest("form");
     const $counter = $tweetForm.find(".counter");
